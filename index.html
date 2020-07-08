@@ -13,7 +13,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
 </head>
 
 <body>
@@ -21,26 +21,46 @@
 
 
     <header class="bg-warning">
-        <h1>Weather App</h1>
+        <h1 class="text-center" id="icon">Weather App</h1>
     </header>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <input class="input" id="search-text" type="text"></input>
-                <button class="btn button" id="search"> Search </button>
-                <div id="recent">
-                    <!-- dynamically created from array of recent searches -->
-                </div>
+                <h5 class="text-white text-center">Please enter a city:</h5>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="search-text" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button" id="search">Search</button>
+                  </div>
+              </div>
+              <div id="recent">
+                <button type="button" class="btn btn-primary btn-block">Dallas</button>
+                <button type="button" class="btn btn-primary  btn-block">Denver</button>
+                
+            </div> 
             </div>
+            
+             <!-- <div class="col-md-4">
+                <input class="input" id="search-text" type="text"></input>
+                <button class="btn button center-content" id="search"> Search </button>
+                <div id="recent">
+                    <button type="button" class="btn btn-primary btn-block">Dallas</button>
+                    <button type="button" class="btn btn-secondary  btn-block">Denver</button>
+                    dynamically created from array of recent searches 
+                </div> 
+            </div> -->
         <div class="col-md-8">
             <div id="current">
-                <h1 id="city-name"></h1>
+            <div>
+                <h1 id="city-name"> </h1>
+            </div>
                 <p>Temperature: <span id="temperature"></span> degrees</p>
                 <p>Humidity: <span id="humidity"></span> %</p>
                 <p>Wind Speed: <span id="wind-speed"></span></p>
                 <p>UV Index: <span id="uv"></span></p>
             </div>
-            <div id="five-day" class="row">
+            <div id="five-day">
+                <h1> 5 Day Forcast </h1>
                 <!-- use attr to dynamically make 5 day forcast all of these to have own column -->
                 <!-- create array that stores values -->
             </div>
