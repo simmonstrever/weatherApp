@@ -1,0 +1,11 @@
+#recent{
+    height: 500px;
+    background-color: red;
+}
+
+#current, #five-day{
+    height: 250px;
+    background-color: lightblue;
+    margin-top: 30px;
+}
+
