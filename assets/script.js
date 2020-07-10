@@ -27,12 +27,16 @@ $("#search").on("click", function () {
         method: "GET"
 
     }).then(function (response) {
+
+    //    console.log(response);
         
         $("#city-name").text(location);
         $("#temperature").text("Temperature: " + response.list[0].main.temp);
         $("#humidity").text("Humidity: " + response.list[0].main.humidity + "%");
         $("#wind-speed").text("Wind-Speed: "+ response.list[0].wind.speed);
-        // var tesT = $("<img>").attr("src", iconURL);
+        var pic = $("#wicon").attr("src", "http://openweathermap.org/img/w/" + response.list[0].weather[0].icon + ".png");
+        $(pic).append("#city-name");
+
         
         //if response is empty use geo location
         // console.log(JSON.stringify(response));
@@ -42,26 +46,34 @@ $("#search").on("click", function () {
         // $("#city-name").append(response.list[0].weather[0].icon);
         
         
-        for (var i = 0; i<6; i++){
-            console.log(days);
+        for (var i = 0; i<8; ++i ){
+
+            var days = response.list.filter(function (forecast) {
+                return forecast.dt_txt.includes("12:00:00")
+            })
+        
+           console.log(response.list[i].weather[0].icon)
+            // console.log(days[i].weather[0].icon);
+
             
             $(`#temp${i}`).text("Temp " + response.list[i+7].main.temp);
-            // $(`#icon${i}`).attr("src", "http://openweathermap.org/img/w/" + response.list[i*7].weather.icon+ ".png");
-            console.log(response.list[i].main.temp);
+            var iconTest= $(`#icon${i}`).attr("src", "http://openweathermap.org/img/w/" + response.list[i].weather[0].icon+ ".png");
+            $("#card-text").append(iconTest);
+
+           
+
+
 
         }
         
        
-
+        // var iconID = response.list[8].weather[0].icon;
+        // var iconURL = "http://openweathermap.org/img/w/" + iconID + ".png";
+        // console.log(iconURL);
 
           
-       days = response.list.filter(function (forecast) {
-        return forecast.dt_txt.includes("12:00:00")
-    })
-
-    var iconID = days[1].weather[0].icon;
-    var iconURL = "http://openweathermap.org/img/w/" + iconID + ".png";
-    console.log(iconURL);
+  
+  
     
  
         
@@ -81,7 +93,7 @@ $("#search").on("click", function () {
 
     // console.log(response.weather.icon);
 
-    var uvURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?" + query + "&lat=" + response.city.coord.lat + "&lon=" + response.city.coord.lon + "&cnt=5";
+    // var uvURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?" + query + "&lat=" + response.city.coord.lat + "&lon=" + response.city.coord.lon + "&cnt=5";
     // console.log(uvURL);
     // console.log(response.city.coord.lat);
     // console.log(response.city.coord.lon);
