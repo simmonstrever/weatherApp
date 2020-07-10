@@ -16,61 +16,74 @@
 </head>
 
 <body>
-    <input class="text" id="search-text">
-    <button class="button" id="search">
-        Search
-    </button>
 
-    <header class="bg-warning">
+
+    <header class="bg-secondary">
         <h1 class="text-center">Weather App</h1>
     </header>
 
-    <body>
 
-        <div class="container-fluid">
-         
 
-            <div class="col-md-8">
-
-                <div class="row">
-                        
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div>
+                        <input class="text" id="search-text">
+                        <button class="button" id="search">
+                            Search
+                        </button>
                     </div>
-                    <div class="col-md-12 bg-primary card" id="currentWeather">
-                        <div class="card-body">
-                            <div>
-                                <h3 id="city-name" id="current" class="card-title"> </h3>
-                                <img class=" card-title icon " id="wicon" src="">
+                    <div class="btn-group-vertical col-md-12">
+                        <div class="row">
+                        <button class="btn btn-block" href="http://api.openweathermap.org/data/2.5/forecast?q=Denver&units=imperial&appid=922170f09e7e847c60969243d491caad"><span>Denver </span></button>
+                        <button class="btn btn-block"> <span> Austin </span></button>
+                        <button class="btn btn-block"> <span> Seattle </span> </button>
                             </div>
-                            <p class="card-text">Temperature: <span id="temperature"></span> degrees</p>
-                            <p class="card-text">Humidity: <span id="humidity"></span> %</p>
-                            <p>Wind Speed: <span id="wind-speed"></span></p>
-                            <p>UV Index: <span id="uv"></span></p>
-                        </div>
                     </div>
-    
                 </div>
 
-            
+                <div class="col-md-8 card" id="currentWeather">
+                    <div class="card-body">
+                        <div class="row">
+                            <h3 id="city-name" id="current" class="card-title"></h3>
+                            <a><img class=" icon" id="wicon" src=""></a>
 
-        
+                        </div>
+                        <p class="card-text"><span id="temperature"></span></p>
+                        <p class="card-text"><span id="humidity"></span> </p>
+                        <p><span id="wind-speed"></span></p>
+                        <p><span id="uv"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-            <div class="col-md-10 card" id="forecast-container">
-                <h3> 5Day Forecast </h3>
 
-                <div class="row">
+
+
+
+
+        <div class="col-md-12">
+
+            <div class="col-md-8 card float-right" id="forecast-container">
+                <h3 class="text-center"> 5Day Forecast </h3>
+
+                <div class="row card-deck">
                     <!-- first -->
                     <div class="card" id="day1">
                         <h3 class="card-header" id="temp1">
-                            Something
+                            
                         </h3>
                         <div class="card-body">
                             <p class="card-text">
                                 <a><img class="card-img-top" id="icon1" src=""></a>
+
                             </p>
                         </div>
-                        <div class="card-footer">
-                            footer
+                        <div class="card-footer" id="footer1">
+                            
                         </div>
 
                     </div>
@@ -78,117 +91,74 @@
                     <!-- second day -->
                     <div class="card" id="day2">
                         <h3 class="card-header" id="temp2">
-                            Something
+                            
                         </h3>
                         <div class="card-body">
                             <p class="card-text">
                                 <a><img class="card-img-top" id="icon2" src=""></a>
                             </p>
                         </div>
-                        <div class="card-footer">
-                            footer
+                        <div class="card-footer" id="footer2">
+                            
                         </div>
                     </div>
 
                     <!-- 3rd -->
                     <div class="card" id="day3">
                         <h3 class="card-header" id="temp3">
-                            Something
+                            
                         </h3>
                         <div class="card-body">
                             <p class="card-text">
                                 <a><img class="card-img-top" id="icon3" src=""></a>
                             </p>
                         </div>
-                        <div class="card-footer">
-                            footer
+                        <div class="card-footer" id="footer3">
+                            
                         </div>
 
                     </div>
 
                     <div class="card" id="day4">
                         <h3 class="card-header" id="temp4">
-                            Something
+                            
                         </h3>
                         <div class="card-body">
                             <p class="card-text">
                                 <img class="card-img-top" id="icon4" src="">
                             </p>
                         </div>
-                        <div class="card-footer">
-                            footer
+                        <div class="card-footer" id="footer4">
+                           
                         </div>
 
                     </div>
                     <div class="card" id="day5">
                         <h3 class="card-header" id="temp5">
-                            Something
+                            
                         </h3>
                         <div class="card-body">
                             <p class="card-text">
                                 <img class="card-img-top" id="icon5" src="">
                             </p>
                         </div>
-                        <div class="card-footer">
-                            footer
+                        <div class="card-footer" id="footer5">
+                           
                         </div>
 
                     </div>
                 </div>
             </div>
+
         </div>
-   
 
 
+    </div>
 
-
-
-
-        
-
-        <!-- <div class="container-fluid"> -->
-
-
-        <!-- <div class="col-8">
-                
-                <div class="card">
-                  
-                    <div class="card-body">
-                        <div>
-                            <h3 id="city-name" id="current" class="card-title"> </h3>
-                            <img class=" card-title icon " id="wicon" src="">
-                        </div>
-                        <p class="card-text">Temperature: <span id="temperature"></span> degrees</p>
-                        <p class="card-text">Humidity: <span id="humidity"></span> %</p>
-                        <p>Wind Speed: <span id="wind-speed"></span></p>
-                        <p>UV Index: <span id="uv"></span></p>
-                    </div>
-                </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <footer class="footer">
-            <h3>I made it</h3>
-        </footer>
-
-
-
-
-
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="assets/script.js"></script>
-    </body>
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
 
 </html>
 
@@ -199,15 +169,3 @@
 
 
 
-<!-- <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-  </div> -->

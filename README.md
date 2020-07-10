@@ -45,3 +45,7 @@ You are required to submit the following for review:
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+Weather APP
+
+This was the first project that was truly frustrating, as I found that planning is extremely important. 
+The API works and is accurate however, due to extensive API research the styling is poor and will need to be redone at a later date. However the project is complete and am happy with it.
