@@ -16,77 +16,154 @@
 </head>
 
 <body>
-
-
+    <input class="text" id="search-text">
+    <button class="button" id="search">
+        Search
+    </button>
 
     <header class="bg-warning">
         <h1 class="text-center">Weather App</h1>
     </header>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4">
+    <body>
 
-                <h5 class="text-black text-center">Where am i?</h5>
+        <div class="container-fluid">
+         
 
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="search-text" placeholder=""
-                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <div class="col-md-8">
 
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" id="search">Search</button>
+                <div class="row">
+                        
                     </div>
+                    <div class="col-md-12 bg-primary card" id="currentWeather">
+                        <div class="card-body">
+                            <div>
+                                <h3 id="city-name" id="current" class="card-title"> </h3>
+                                <img class=" card-title icon " id="wicon" src="">
+                            </div>
+                            <p class="card-text">Temperature: <span id="temperature"></span> degrees</p>
+                            <p class="card-text">Humidity: <span id="humidity"></span> %</p>
+                            <p>Wind Speed: <span id="wind-speed"></span></p>
+                            <p>UV Index: <span id="uv"></span></p>
+                        </div>
+                    </div>
+    
                 </div>
 
-                <div id="recent">
-                    <div class="list-group list-group-flush">
-                        <button type="button" class="btn btn-primary btn-block">Dallas</button>
-                        <button type="button" class="btn btn-primary  btn-block">Denver</button>
+            
+
+        
+
+
+            <div class="col-md-12 card" id="forecast-container">
+                <h3> 5Day Forecast </h3>
+
+                <div class="row">
+                    <!-- first -->
+                    <div class="card" id="day1">
+                        <h3 class="card-header" id="temp1">
+                            Something
+                        </h3>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Icon
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            footer
+                        </div>
+
+                    </div>
+
+                    <!-- second day -->
+                    <div class="card" id="day2">
+                        <h3 class="card-header" id="temp2">
+                            Something
+                        </h3>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Icon
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            footer
+                        </div>
+                    </div>
+
+                    <!-- 3rd -->
+                    <div class="card" id="day3">
+                        <h3 class="card-header" id="temp3">
+                            Something
+                        </h3>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Icon
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            footer
+                        </div>
+
+                    </div>
+
+                    <div class="card" id="day4">
+                        <h3 class="card-header" id="temp4">
+                            Something
+                        </h3>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Icon
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            footer
+                        </div>
+
+                    </div>
+                    <div class="card" id="day5">
+                        <h3 class="card-header" id="temp5">
+                            Something
+                        </h3>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Icon
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            footer
+                        </div>
+
                     </div>
                 </div>
-
             </div>
+        </div>
+   
 
-            <!-- current weather card -->
 
 
 
-            <div class="col-8">
+
+
+        
+
+        <!-- <div class="container-fluid"> -->
+
+
+        <!-- <div class="col-8">
+                
                 <div class="card">
-                    <!-- look up icon issues -->
+                  
                     <div class="card-body">
                         <div>
-                    <h3 id="city-name" id="current" class="card-title"> </h3>
-                    <img class=" card-title icon " id="wicon" src="">
-                            </div>
-                    <p class="card-text">Temperature: <span id="temperature"></span> degrees</p>
-                    <p class="card-text">Humidity: <span id="humidity"></span> %</p>
-                    <p>Wind Speed: <span id="wind-speed"></span></p>
-                    <p>UV Index: <span id="uv"></span></p>
+                            <h3 id="city-name" id="current" class="card-title"> </h3>
+                            <img class=" card-title icon " id="wicon" src="">
+                        </div>
+                        <p class="card-text">Temperature: <span id="temperature"></span> degrees</p>
+                        <p class="card-text">Humidity: <span id="humidity"></span> %</p>
+                        <p>Wind Speed: <span id="wind-speed"></span></p>
+                        <p>UV Index: <span id="uv"></span></p>
                     </div>
-                </div>
-                
-                    
-                        <div class="col-12 bg-outline-dark">
-                        <div class="card-deck" id="forecastDiv">
-                            
-                            <!-- <div class="card">
-                            <div class="card-body" >
-                                <p class="card-text">Test</p>
-                            </div>
-                            </div> -->
-                            
-                        </div>
-                        </div>
-
-            
-
-                    
-                
-            
-                
-
-            </div>
+                </div> -->
 
 
 
@@ -96,29 +173,22 @@
 
 
 
-        </div>
-    </div>
 
 
-    <footer class="footer">
-        <h3>I made it</h3>
-    </footer>
 
-    <!-- <div id="five-day">
-            <h1> 5 Day Forcast </h1>
-            use attr to dynamically make 5 day forcast all of these to have own column -->
-    <!-- create array that stores values
 
-        </div> -->
+        <footer class="footer">
+            <h3>I made it</h3>
+        </footer>
 
 
 
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/script.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/script.js"></script>
+    </body>
 
 </html>
 
