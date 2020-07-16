@@ -163,10 +163,10 @@ $("#searchCity").on("click", function () {
 			});
 		});
 	});
-
-
-
+	// console.log(currentWeather);
 });
+// console.log(currentWeather);
+// localStorage.setItem('currentWeatherIndex', JSON.stringify(currentWeather));
 
 
 
